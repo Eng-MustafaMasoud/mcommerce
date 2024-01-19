@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-
+import defaultTheme from 'tailwindcss/defaultTheme'
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        sans:['Poppins',...defaultTheme.fontFamily.sans],
+        display:['Poppins',...defaultTheme.fontFamily.sans]
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
