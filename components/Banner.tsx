@@ -18,16 +18,13 @@ const Banner = ({ banners }: any) => {
       setDocActive(next);
     },
     appendDots: (dots: any) => (
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "7%",
-          transform: "translateY(-50%)",
-        }}
-      >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
-      </div>
+     <div  style={{ width:"50px",height:"80vh",zIndex:"10",backdropFilter: "blur(20px)",top:"0" }}>
+
+         <ul style={{ gap: "1rem",display:"flex",flexDirection:"column",position: "absolute",
+           top: "50%",
+           left: "0%",maxWidth:"fit-content",maxHeight:"max-content",transform:"translateY(-50%)" }}> {dots} </ul>
+     </div>
+    
     ),
     customPaging: (i: any) => (
       <div
@@ -67,16 +64,12 @@ const Banner = ({ banners }: any) => {
         settings: {
           dots: true,
           appendDots: (dots: any) => (
-            <div
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "2%",
-                transform: "translateY(-50%)",
-              }}
-            >
-              <ul style={{ margin: "0px" }}> {dots} </ul>
-            </div>
+            <div  style={{ width:"50px",height:"80vh",top:"0",zIndex:"10",backdropFilter: "blur(20px)" }}>
+
+            <ul style={{ gap: "1rem",display:"flex",flexDirection:"column",position: "absolute",
+              top: "50%",
+              left: "0%",maxWidth:"fit-content",maxHeight:"max-content",transform:"translateY(-50%)" }}> {dots} </ul>
+        </div>
           ),
           customPaging: (i: any) => (
             <div
@@ -109,13 +102,13 @@ const Banner = ({ banners }: any) => {
     <div>
       <Slider {...settings}>
         {banners?.map((item: any) => (
-          <Link href={"/shop"} className="relative" key={item?._id}>
+          <Link href={"/shop"} className="relative w-full h-full" key={item?._id}>
             <Image
+              width={540}
+              height={600}
               src={urlFor(item.image).url()}
               alt="banner image"
-              width={2000}
-              height={2000}
-              className="w-full max-h-[650px] object-cover"
+              className="w-[100%] h-[80vh] object-cover"
             />
             <div className="w-full h-40 bg-gradient-to-t from-gray-100 to-transparent absolute bottom-0 z-20" />
           </Link>

@@ -12,18 +12,18 @@ const Navbar = () => {
 
   const pathname = usePathname();
   return (
-    <header className="w-full">
-      <nav className="max-w-[1440px] max-auto flex justify-between items-center gap-2 2xl:px-4 p-6 border-b border-gray-200">
+    <header className=" w-full sticky top-0 z-50 backdrop-blur	border-b border-gray-200 ">
+      <nav className="  flex justify-between max-w-[1440px] mx-auto items-center gap-2 2xl:px-4 p-6 max-sm:px-0 ">
         <div className="">
-          <span className="text-xl font-bold">
+          <span className="md:text-4xl text-xl max-sm:text-lg font-extrabold">
             <Link href="/">Mcommerce</Link>
           </span>
         </div>
-        <div className=" flex-1 flex border border-gray-300 max-w-[400px] rounded-md items-center pr-2">
+        <div className=" flex-1 flex border bg-white border-gray-300 max-w-[350px] rounded-md items-center pr-2 max-md:w-1/2">
           <input
             type="text"
             placeholder="search your products..."
-            className=" w-full outline-none p-2 rounded-md items-center justify-center flex caret-gray-300 placeholder:text-gray-200 "
+            className="  outline-none p-2 rounded-md items-center justify-center flex caret-gray-300 placeholder:text-gray-200 w-full "
             onChange={(e) => setSearchQuery(e.target.value)}
             value={searchQuery}
           />

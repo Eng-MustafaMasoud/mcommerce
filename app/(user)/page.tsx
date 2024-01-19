@@ -4,6 +4,7 @@ import { groq } from 'next-sanity'
 import React from 'react'
 
 
+export const revalidate=10;
 const bannerQuery=groq`*[_type=='banner']{
   image,
   _id
@@ -11,10 +12,9 @@ const bannerQuery=groq`*[_type=='banner']{
 const Homepage = async() => {
 
   const banners=await Client.fetch(bannerQuery)
-  console.log(banners)
   return (
-    <main className='max-w-[1440px] mx-auto px-6'>
-      <Banner/>
+    <main className='w-full px-6'>
+      <Banner banners={banners}/>
     </main>
   )
 }
