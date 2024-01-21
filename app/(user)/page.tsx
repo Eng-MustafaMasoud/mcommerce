@@ -1,4 +1,4 @@
-import Banner from '@/components/Banner'
+ import Banner from '@/components/Banner'
 import NewArrivalProducts from '@/components/NewArrivalProducts';
 import BestSellers from "@/components/BestSellers";
 import HomeBanner from "@/components/HomeBanner";
@@ -17,7 +17,7 @@ const bannerQuery=groq`*[_type=='banner']{
 //   ...
 // } | order(_createdAt desc)`;
 
- const newArrival = groq`*[_type == 'product'&&position=='new arrival']{
+export const newArrival = groq`*[_type == 'product'&&position=='new arrival']{
   ...
 } | order(_createdAt desc)`;
 
