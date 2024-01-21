@@ -17,7 +17,7 @@ const bannerQuery=groq`*[_type=='banner']{
 //   ...
 // } | order(_createdAt desc)`;
 
-export const newArrival = groq`*[_type == 'product'&&position=='new arrival']{
+ const newArrivalQuery = groq`*[_type == 'product'&&position=='new arrival']{
   ...
 } | order(_createdAt desc)`;
 
@@ -33,7 +33,7 @@ const specialOffersQuery = groq`*[_type == 'product' && position == 'highQuality
 const Homepage = async() => {
 
   const banners=await Client.fetch(bannerQuery)
-  const product=await Client.fetch(newArrival)
+  const product=await Client.fetch(newArrivalQuery)
   const bestSellersProducts = await Client.fetch(bestSellersQuery);
   const specialOffersProducts = await Client.fetch(specialOffersQuery); 
   return (
