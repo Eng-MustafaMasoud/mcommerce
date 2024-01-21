@@ -26,14 +26,14 @@ export const newArrival = groq`*[_type == 'product'&&position=='new arrival']{
 const Homepage = async() => {
 
   const banners=await Client.fetch(bannerQuery)
-  const newProducts=await Client.fetch(newArrival)
+  const product=await Client.fetch(newArrival)
   // const productData = await Client.fetch(productQuery);
  
   return (
     <main className='w-full px-6'>
       <Banner banners={banners}/>
       {/* <Products productData={productData}/> */}
-      <NewArrivalProducts newProducts={newProducts}/>
+      <NewArrivalProducts products={product}/>
     </main>
   )
 }
