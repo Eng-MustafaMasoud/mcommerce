@@ -13,9 +13,9 @@ const bannerQuery=groq`*[_type=='banner']{
   _id
 } | order(_createdAt asc)`;
 
-export const productQuery = groq`*[_type == 'product']{
-  ...
-} | order(_createdAt desc)`;
+// export const productQuery = groq`*[_type == 'product']{
+//   ...
+// } | order(_createdAt desc)`;
 
 export const newArrival = groq`*[_type == 'product'&&position=='new arrival']{
   ...
