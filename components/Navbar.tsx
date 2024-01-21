@@ -12,8 +12,8 @@ const Navbar = () => {
 
   const pathname = usePathname();
   return (
-    <header className=" w-full sticky top-0 z-50 backdrop-blur	border-b border-gray-200 ">
-      <nav className="  flex justify-between max-w-[1440px] mx-auto items-center gap-2 2xl:px-4 p-6 max-sm:px-0 ">
+    <header className=" w-full sticky bg-gray-100 top-0 z-50 backdrop-blur	border-b border-gray-200 ">
+      <nav className="  flex justify-between max-w-[1440px] mx-auto items-center gap-2 2xl:px-4 p-6 max-sm:px-2">
         <div className="">
           <span className="md:text-4xl text-xl max-sm:text-lg font-extrabold">
             <Link href="/">Mcommerce</Link>

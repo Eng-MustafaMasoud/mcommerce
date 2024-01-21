@@ -22,11 +22,3 @@ export const urlFor = (source: any) => {
   return builder.image(source);
 };
 
-// export const productQuery = groq`*[_type == 'product']{
-//   ...
-// } | order(_createdAt desc)`;
-
-// export const products = async () => {
-//   const productData = await Client.fetch(productQuery);
-//   return productData;
-// };

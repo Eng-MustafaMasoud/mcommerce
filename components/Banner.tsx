@@ -104,12 +104,13 @@ const Banner = ({ banners }: any) => {
         {banners?.map((item: any) => (
           <Link href={"/shop"} className="relative w-full h-full" key={item?._id}>
             <Image
-              width={540}
+              width={1000}
               height={600}
               src={urlFor(item.image).url()}
               alt="banner image"
               className="w-[100%] h-[80vh] object-cover"
             />
+            <p className="absolute top-[50%] left-[50%] text-center z-10 drop-shadow-[0_1.2px_1.2px_rgba(210,0,0,0.8)] backdrop-blur-[20px] px-16 max-w-[max-content] py-16 font-extrabold trackind-wider uppercase text-white rounded-lg text-4xl translate-x-[-50%] translate-y-[-50%]">Super Sale 50% Off</p>
             <div className="w-full h-40 bg-gradient-to-t from-gray-100 to-transparent absolute bottom-0 z-20" />
           </Link>
         ))}

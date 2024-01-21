@@ -4,6 +4,7 @@ import {Navbar,Footer} from '@/components'
 import {easeInOut, motion} from 'framer-motion'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import PageButton from '@/components/PageButton';
 export const metadata: Metadata = {
   title: 'Ecommerce',
   description: 'Mustafa Masoud ecommerce app',
@@ -20,6 +21,7 @@ export default function RootLayout({
         
 
         <Navbar/>
+        <PageButton/>
         {children}
         <Footer/>
     
