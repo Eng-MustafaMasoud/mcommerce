@@ -17,7 +17,7 @@ const bannerQuery=groq`*[_type=='banner']{
 //   ...
 // } | order(_createdAt desc)`;
 
-export const newArrival = groq`*[_type == 'product'&&position=='new arrival']{
+ const newArrival = groq`*[_type == 'product'&&position=='new arrival']{
   ...
 } | order(_createdAt desc)`;
 
