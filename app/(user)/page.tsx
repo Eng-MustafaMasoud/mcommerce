@@ -1,7 +1,8 @@
 import Banner from '@/components/Banner'
 import NewArrivalProducts from '@/components/NewArrivalProducts';
-import Products from '@/components/Products';
-import { Client } from '@/lib/sanityClient'
+import BestSellers from "@/components/BestSellers";
+import HomeBanner from "@/components/HomeBanner";
+import YearProduct from "@/components/YearProduct";import { Client } from '@/lib/sanityClient'
 import { groq } from 'next-sanity'
 import React from 'react'
 
@@ -20,6 +21,12 @@ export const newArrival = groq`*[_type == 'product'&&position=='new arrival']{
   ...
 } | order(_createdAt desc)`;
 
+const bestSellersQuery = groq`*[_type == 'product' && position == 'bestSeller']{
+  ...
+ } | order(_createdAt asc)`;
+const specialOffersQuery = groq`*[_type == 'product' && position == 'highQuality']{
+  ...
+ } | order(_createdAt asc)`;
 
 
 
@@ -27,13 +34,17 @@ const Homepage = async() => {
 
   const banners=await Client.fetch(bannerQuery)
   const product=await Client.fetch(newArrival)
-  // const productData = await Client.fetch(productQuery);
- 
+  const bestSellersProducts = await Client.fetch(bestSellersQuery);
+  const specialOffersProducts = await Client.fetch(specialOffersQuery); 
   return (
     <main className='w-full px-6'>
       <Banner banners={banners}/>
       {/* <Products productData={productData}/> */}
       <NewArrivalProducts products={product}/>
+      <HomeBanner />
+      <BestSellers products={bestSellersProducts} title="Our Bestsellers" />
+      <YearProduct />
+      <BestSellers products={specialOffersProducts} title="Special Offers" />
     </main>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import Heading from "./Heading";
-import { ProductProps } from "../../type";
+import { ProductProps } from "@/types";
 import Product from "./Product";
 
 interface Props {

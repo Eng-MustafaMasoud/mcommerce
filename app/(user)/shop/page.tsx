@@ -27,7 +27,7 @@ const ShopPage = () => {
 
   return (
     <Container>
-      <div className="flex items-center justify-between pb-10">
+      <div className="flex items-center justify-between pb-10 max-w-[1440px] max-auto px-6">
         <h2 className="text-2xl text-primeColor font-bold">All Proudcts</h2>
         <div className="flex items-center gap-4">
           <span

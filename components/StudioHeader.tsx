@@ -13,7 +13,6 @@ const StudioHeader = (props: any) => {
         >
           <IoReturnDownBack className="text-2xl" /> Go to Website
         </Link>
-        <Image src={logo} alt="logo" className="w-24" />
         <p className="text-sm">Admin Studio for OREBI Online Shopping</p>
       </div>
       {props.renderDefault(props)}

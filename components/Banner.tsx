@@ -18,7 +18,7 @@ const Banner = ({ banners }: any) => {
       setDocActive(next);
     },
     appendDots: (dots: any) => (
-     <div  style={{ width:"50px",height:"80vh",zIndex:"10",backdropFilter: "blur(20px)",top:"0" }}>
+     <div  style={{ width:"50px",height:"75vh",zIndex:"5",backdropFilter: "blur(20px)",top:"0" }}>
 
          <ul style={{ gap: "1rem",display:"flex",flexDirection:"column",position: "absolute",
            top: "50%",
@@ -64,7 +64,7 @@ const Banner = ({ banners }: any) => {
         settings: {
           dots: true,
           appendDots: (dots: any) => (
-            <div  style={{ width:"50px",height:"80vh",top:"0",zIndex:"10",backdropFilter: "blur(20px)" }}>
+            <div  style={{ width:"50px",height:"80vh",top:"0",zIndex:"5",backdropFilter: "blur(20px)" }}>
 
             <ul style={{ gap: "1rem",display:"flex",flexDirection:"column",position: "absolute",
               top: "50%",

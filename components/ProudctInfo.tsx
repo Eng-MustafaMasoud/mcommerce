@@ -1,5 +1,5 @@
 "use client";
-import { ProductProps } from "../../type";
+import { ProductProps } from "@/types";
 import Price from "./Price";
 
 interface Props {

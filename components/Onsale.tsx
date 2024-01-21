@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ProductProps } from "../../type";
+import { ProductProps } from "@/types";
 import Image from "next/image";
 import { urlFor } from "@/lib/sanityClient";
 import Price from "./Price";

@@ -33,8 +33,9 @@ export interface ProductProps {
     quantity: number;
   }
   
+
   export interface StateProps {
-    mcommerce: {
+    orebi: {
       productData: ProductProps[];
     };
   }
